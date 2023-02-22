@@ -23,7 +23,7 @@ const postsPerPage = 3;
 export default function Component() {
   const { data, loading } = useQuery(Component.query, {
     variables: Component.variables(),
-    fetchPolicy: 'no-cache',
+    fetchPolicy: 'cache-and-network',
   });
   if (loading) {
     return null;
