@@ -23,7 +23,7 @@ const postsPerPage = 3;
 export default function Component() {
   const { data, loading } = useQuery(Component.query, {
     variables: Component.variables(),
-    pollInterval: 120000, // 2 minutes (in milliseconds)
+    fetchPolicy: 'cache-and-network',
   });
   if (loading) {
     return null;
